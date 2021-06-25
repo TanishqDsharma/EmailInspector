@@ -1,0 +1,254 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Response</title>
+    <link href="{{url_for('static', filename='css/bootstrap-grid.css')}}" rel="stylesheet">
+    <link href="{{url_for('static', filename='css/bootstrap-grid.min.css')}}" rel="stylesheet">
+    <link href="{{url_for('static', filename='css/bootstrap-reboot.css')}}" rel="stylesheet">
+    <link href="{{url_for('static', filename='css/bootstrap-reboot.min.css')}}" rel="stylesheet">
+    <link href="{{url_for('static', filename='css/bootstrap.css')}}" rel="stylesheet">
+    <link href="{{url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="{{url_for('index')}}">Analyze Email</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{{url_for('index')}}">Response</a>
+              </li>
+              
+              
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <br>
+     
+    <div class="jumbotron jumbotron-fluid" style="padding: 20px; margin: 12px; background-color:rgb(175, 175, 175);">
+      <h1 class="display-7">Basic Email Info!</h1>
+
+        <div class="container">
+            <dl class="row">
+                <dt class="col-sm-3">Subject:</dt>
+                <dd class="col-sm-9">{{list1[0]}}</dd>
+                <dt class="col-sm-3">Message-ID:</dt>
+                <dd class="col-sm-9">{{list1[1]}}</dd>
+                <dt class="col-sm-3">From:</dt>
+                <dd class="col-sm-9">{{list1[3]}}</dd>
+                <dt class="col-sm-3">To:</dt>
+                <dd class="col-sm-9">{{list1[4]}}</dd>
+    
+            </dl>
+        </div>
+      </div>
+      <br>
+      <div class="container-fluid">
+        <div class="table-responsive-lg">
+        <table class="table table-hover table-bordered table-striped " >
+            <thead style="background-color: black;color:whitesmoke;">
+              <tr>
+                <th scope="col" class="col-lg-3"><h3>Captured Received Headers</h3></th>
+                <th scope="col" class="col-lg-9"><h3>Response</h3></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Top-Most Received Header</th>
+                <td>{{received_header[0]}}</td>
+              </tr>
+              <tr>
+                <th scope="row">Middle Received Header</th>
+                <td>{{received_header[1]}}</td>
+               </tr>
+               <tr>
+                <th scope="row">Bottom-Most Received Header</th>
+                <td>{{received_header[2]}}</td>
+               </tr>
+               
+    
+            </tbody>
+          </table>
+          <br>
+      </div>
+      </div>
+      <div class="container-fluid">
+        <div class="table-responsive-lg">
+          <table class="table table-hover table-bordered table-striped">
+            <thead style="background-color: black;color:whitesmoke;">
+
+              <tr>
+                <th scope="col"><h3>From</h3></th>
+                <th scope="col"><h3>By</h3></th>
+                <th scope="col"><h3>With</h3></th>
+                <th scope="col"><h3>Date and Time</h3></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">None</th>
+                <td>{{m1[0]}}</td>
+                <td>{{m5[0]}}</td>
+                <td>{{m4[0]}}</td>
+              </tr>
+              <tr>
+                <th scope="row">{{m2[0]}}</th>
+                <td>{{m1[1]}}</td>
+                <td>{{m5[1]}}</td>
+                <td>{{m4[1]}}</td>
+              </tr>
+              <tr>
+                {% if m2_len < 2 %}
+
+                <th scope="row">{{None}}</th>
+                
+                {% else %}
+                <th scope="row">{{m2[1]}}</th>
+
+                {% endif %}
+                {% if m1_len < 3 %}
+
+                <td>{{None}}</td>
+
+                {% else %}
+                <td>{{m1[2]}}</td>
+                {% endif %}
+                
+                {% if m5_len < 3 %}
+                <td>{{None}}</td>
+                {% else %}
+                <td>{{m5[2]}}</td>
+
+                {% endif %}
+                
+                {% if m4_len < 3 %}
+                <td>{{None}}</td>
+
+                {% else %}
+                <td>{{m4[2]}}</td>
+                {% endif %}
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+        <br>
+      <div class="container-fluid">
+        <div class="table-responsive-lg">
+        <table class="table table-hover table-bordered table-striped" >
+            <thead style="background-color: black;color: whitesmoke;">
+              <tr>
+                <th scope="col" class="col-lg-3"><h3>Important Security Headers</h3></th>
+                <th scope="col" class="col-lg-9"><h3>Response</h3></th>
+
+
+                
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Received-SPF</th>
+                <td>{{list1[2]}}</td>
+              </tr>
+              <tr>
+                <th scope="row">DKIM-Signature</th>
+                <td>{{list1[5]}}</td>
+               </tr>
+               <tr>
+                <th scope="row">Return-Path</th>
+                <td>{{list1[6]}}</td>
+               </tr>
+               <tr>
+                <th scope="row">Message-ID</th>
+                <td>{{list1[1]}}</td>
+               </tr>
+    
+            </tbody>
+          </table>
+
+      </div>
+      </div>
+      <br>
+      <div class="container-fluid">
+        <div class="table-responsive-lg">
+        <table class="table table-hover table-bordered table-striped" >
+          <thead style="background-color: black;color: whitesmoke;">
+
+              <tr>
+                <th scope="col" class="col-lg-3"><h3>Other Informational Headers</h3></th>
+                <th scope="col" class="col-lg-9"><h3>Response</h3></th>
+
+
+                
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Delivered-To</th>
+                <td>{{list1[16]}}</td>
+              </tr>
+              <tr>
+                <th scope="row">X-Google-Smtp-Source</th>
+                <td>{{list1[7]}}</td>
+              </tr>
+              <tr>
+                <th scope="row">X-Received</th>
+                <td>{{list1[8]}}</td>
+               </tr>
+               <tr>
+                <th scope="row">ARC-Signature</th>
+                <td>{{list1[18]}}</td>
+               </tr>
+               <tr>
+                <th scope="row">ARC-Seal</th>
+                <td>{{list1[17]}}</td>
+               </tr>
+
+               <tr>
+                <th scope="row">Authentication Results</th>
+                <td>{{list1[9]}}</td>
+               </tr>
+               <tr>
+                <th scope="row">Reply-To</th>
+                <td>{{list1[10]}}</td>
+               </tr>
+               <tr>
+                <th scope="row">X-SMTPAPI</th>
+                <td>{{list1[11]}}</td>
+               </tr>
+               
+                <th scope="row">MIME-Version</th>
+                <td>{{list1[13]}}</td>
+               </tr>
+               <tr>
+                <th scope="row">Content-Type</th>
+                <td>{{list1[14]}}</td>
+               </tr>
+               <tr>
+                <th scope="row">Content-Transfer-Encoding</th>
+                <td>{{list1[15]}}</td>
+               </tr>
+    
+            </tbody>
+          </table>
+
+      </div>
+      </div>
+      
+      
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="{{url_for('static', filename='js/bootstrap.bundle.js')}}"></script>
+    <script src="{{url_for('static', filename='js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/bootstrap.js')}}"></script>
+    <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+    
+</body>
+</html>

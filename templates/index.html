@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link href="{{url_for('static', filename='css/bootstrap-grid.css')}}" rel="stylesheet">
+    <link href="{{url_for('static', filename='css/bootstrap-grid.min.css')}}" rel="stylesheet">
+    <link href="{{url_for('static', filename='css/bootstrap-reboot.css')}}" rel="stylesheet">
+    <link href="{{url_for('static', filename='css/bootstrap-reboot.min.css')}}" rel="stylesheet">
+    <link href="{{url_for('static', filename='css/bootstrap.css')}}" rel="stylesheet">
+    <link href="{{url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
+
+
+
+
+    
+
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="{{url_for('index')}}">Analyze Email</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{{url_for('index')}}">Response</a>
+              </li>
+              
+              
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <form method="POST">
+        <div class="form-group" style="margin: 20px;">
+            <textarea name='headers' id="content" class="form-control" rows="20" placeholder="Paste the Email Data here."
+                autofocus required></textarea>
+        </div>
+        <br>
+        <center><button type="submit" class="btn btn-dark btn-lg btn-block">Analyze Email Data!</button></center>
+    </form>
+
+    <script src="{{url_for('static', filename='js/bootstrap.bundle.js')}}"></script>
+    <script src="{{url_for('static', filename='js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/bootstrap.js')}}"></script>
+    <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+
+
+
+
+    
+</body>
+</html>
