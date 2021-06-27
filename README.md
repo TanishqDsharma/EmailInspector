@@ -16,6 +16,22 @@ Therefore having a solution to identify such emails with just one click would be
   1. In command prompt type python EmailInspector-Web.py, this will run the server then follow the link: http://127.0.0.1:5000
   
      ![alt text](https://github.com/TanishqDsharma/EmailInspector/blob/main/screenshots/2021-06-27%2015_05_24-EmailInspector-Web.py%20-%20EmailInspector.png)
+  
+  2. Now paste your email data in text area  
+     
+     ![alt text](https://github.com/TanishqDsharma/EmailInspector/blob/main/screenshots/2021-06-27%2015_10_17-Mail.png)
+  
+  3. After pasting your email data in Click on "Analyze it" button.
+     
+     ![alt text](https://github.com/TanishqDsharma/EmailInspector/blob/main/screenshots/2021-06-27%2015_10_58-Response.png)
+     
+     ![alt text](https://github.com/TanishqDsharma/EmailInspector/blob/main/screenshots/2021-06-27%2015_11_22-Response.png)
+  
+  
+
+     
+     
+
 
 
 
