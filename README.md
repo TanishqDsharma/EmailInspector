@@ -21,7 +21,7 @@ Therefore having a solution to identify such emails with just one click would be
      
      ![alt text](https://github.com/TanishqDsharma/EmailInspector/blob/main/screenshots/2021-06-27%2015_10_17-Mail.png)
   
-  3. After pasting your email data in Click on "Analyze it" button.
+  3. After pasting your email data in Click on "Analyze it" button and you will get your email data Analyzed.
      
      ![alt text](https://github.com/TanishqDsharma/EmailInspector/blob/main/screenshots/2021-06-27%2015_10_58-Response.png)
      
