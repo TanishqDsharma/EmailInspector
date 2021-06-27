@@ -26,7 +26,12 @@ Therefore having a solution to identify such emails with just one click would be
      ![alt text](https://github.com/TanishqDsharma/EmailInspector/blob/main/screenshots/2021-06-27%2015_10_58-Response.png)
      
      ![alt text](https://github.com/TanishqDsharma/EmailInspector/blob/main/screenshots/2021-06-27%2015_11_22-Response.png)
-  
+
+### EmailInspector Usage with CLI:
+* Follow the below steps:
+  1. In the command prompt or Terminal window, type the following, and press enter: python EmailInspector.py <file>
+     Replace <file> with any txt which have the email data. [you can get the email data by logging into your gmail selecting any email and after that clicking on "show original
+      message",copy the data from "show original message" and paste it in a txt file]
   
 
      
