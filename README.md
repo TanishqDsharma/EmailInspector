@@ -29,7 +29,7 @@ Therefore having a solution to identify such emails with just one click would be
 
 ### EmailInspector Usage with CLI:
 * Follow the below steps:
-  1. In the command prompt or Terminal window, type the following, and press enter: python EmailInspector.py <file>
+  1. In the command prompt or Terminal window, type the following, and press enter: <b>python EmailInspector.py<b> <file>
      Replace <file> with any txt which have the email data. [you can get the email data by logging into your gmail selecting any email and after that clicking on "show original
       message",copy the data from "show original message" and paste it in a txt file]
   
