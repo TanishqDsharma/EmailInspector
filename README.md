@@ -14,5 +14,7 @@ Therefore having a solution to identify such emails with just one click would be
 ### EmailInspector Usage with web Interface:
 * Follow the below steps:
   1.In command prompt type python EmailInspector-Web.py, this will run the server then follow the link: http://127.0.0.1:5000
+    ![alt text](https://github.com/TanishqDsharma/EmailInspector/blob/main/screenshots/2021-06-27%2015_05_24-EmailInspector-Web.py%20-%20EmailInspector.png)
+
 
 
