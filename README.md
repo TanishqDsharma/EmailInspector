@@ -14,7 +14,7 @@ Therefore having a solution to identify such emails with just one click would be
 ## Intial Setup using docker:
 * <b>Follow the below steps:</b>
    1. docker pull tanishq512/email-image1:2
-   2. docker run -p 80:80 tanishq512/eamil-image1:2  
+   2. docker run -p 80:80 tanishq512/email-image1:2  
      
 ### EmailInspector Usage with web Interface:
 * Follow the below steps:
